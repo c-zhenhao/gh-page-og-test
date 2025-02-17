@@ -24,8 +24,25 @@
         }
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function updateDimensions() {
+                document.getElementById('widthDisplay').textContent = window.innerWidth;
+                document.getElementById('heightDisplay').textContent = window.innerHeight;
+            }
+            updateDimensions();
+            window.addEventListener('resize', updateDimensions);
+        });
+    </script>
+
+
     <br />
     <h1>HELLO</h1>
+
+    <h2>your screen resolution is:</h2>
+    <h3>
+        <span id="widthDisplay"></span> x <span id="heightDisplay"></span>
+    </h3>
 
 </body>
 
