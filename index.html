@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image"
-        content="https://jetpac-prod-images.s3.ap-southeast-1.amazonaws.com/web-images/jetpac_ref_social.png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:image"
+      content="https://jetpac-prod-images.s3.ap-southeast-1.amazonaws.com/web-images/jetpac_ref_social.png"
+    />
     <meta property="og:site_name" content="This is site name." />
     <meta property="og:title" content="This is title." />
     <meta property="og:description" content="This is description." />
     <title>hello og test</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <script src="js/script.js"></script>
     <script>
-        var useragent = navigator.userAgent
-        document.write("<h1>User Agent: " + JSON.stringify(useragent) + "</h1>")
+      var useragent = navigator.userAgent
+      document.write('<h1>User Agent: ' + JSON.stringify(useragent) + '</h1>')
 
-        if (useragent.includes("web-view-android")) {
-            document.write("<h1> web-view-android</h1>")
-        } else if (useragent.includes("web-view-ios")) {
-            document.write("<h1> web-view-ios</h1>")
+      if (useragent.includes('web-view-android')) {
+        document.write('<h1> web-view-android</h1>')
+      } else if (useragent.includes('web-view-ios')) {
+        document.write('<h1> web-view-ios</h1>')
+      }
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        function updateDimensions() {
+          document.getElementById('widthDisplay').textContent =
+            window.innerWidth
+          document.getElementById('heightDisplay').textContent =
+            window.innerHeight
         }
+        updateDimensions()
+        window.addEventListener('resize', updateDimensions)
+      })
     </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            function updateDimensions() {
-                document.getElementById('widthDisplay').textContent = window.innerWidth;
-                document.getElementById('heightDisplay').textContent = window.innerHeight;
-            }
-            updateDimensions();
-            window.addEventListener('resize', updateDimensions);
-        });
-    </script>
-
 
     <br />
     <h1>HELLO</h1>
 
     <h2>your screen resolution is:</h2>
-    <h3>
-        <span id="widthDisplay"></span> x <span id="heightDisplay"></span>
-    </h3>
+    <h3><span id="widthDisplay"></span> x <span id="heightDisplay"></span></h3>
 
-</body>
-
+    <button style="font-size: 36px" onclick="alert(window.ReactNativeWebView)">
+      is window.ReactNativeWebView there test
+    </button>
+    <button
+      style="font-size: 36px"
+      onclick="alert(JSON.stringify(window.ReactNativeWebView))"
+    >
+      is window.ReactNativeWebView there test stringified
+    </button>
+  </body>
 </html>
