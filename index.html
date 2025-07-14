@@ -45,17 +45,19 @@
     <h2>your screen resolution is:</h2>
     <h3><span id="widthDisplay"></span> x <span id="heightDisplay"></span></h3>
 
-    <button style="font-size: 36px" onclick="alert(window.ReactNativeWebView)">
+    <button style="font-size: 20px" onclick="alert(window.ReactNativeWebView)">
       is window.ReactNativeWebView there test
     </button>
+    <br />
     <button
-      style="font-size: 36px"
+      style="font-size: 20px"
       onclick="alert(JSON.stringify(window.ReactNativeWebView))"
     >
       is window.ReactNativeWebView there test stringified
     </button>
+    <br />
     <button
-      style="font-size: 36px"
+      style="font-size: 20px"
       onclick="window.ReactNativeWebView.postMessage(JSON.stringfy({ type: 'RELOAD_WEBVIEW' }))"
     >
       reload webview
