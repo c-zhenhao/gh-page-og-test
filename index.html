@@ -54,5 +54,11 @@
     >
       is window.ReactNativeWebView there test stringified
     </button>
+    <button
+      style="font-size: 36px"
+      onclick="window.ReactNativeWebView.postMessage(JSON.stringfy({ type: 'RELOAD_WEBVIEW' }))"
+    >
+      reload webview
+    </button>
   </body>
 </html>
